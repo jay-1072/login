@@ -7,3 +7,11 @@
 div.lgn {
     width: 25vw;
 }
+
+.email-ip:hover {
+    border-color: green;
+}
+
+.pass-ip:hover {
+    border-color: green;
+}
