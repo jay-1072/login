@@ -10,45 +10,42 @@
 
     <link rel="stylesheet" href="css/style.css" />
 
-   
-
 </head>
 
 <body>
 
+    <form id="myForm" name="Form">
+        <div class="mx-auto mt-5 lgn">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-center mb-3">Sign In</h5>
 
-    
+                    <!-- pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" -->
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control email-ip" id="email" name="email" required>
+                        <label for="email">Email address</label>
+                    </div>
 
-    <div class="mx-auto mt-5 lgn">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title text-center mb-3">Sign In</h5>
+                    <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" -->
+                    <!-- title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"  -->
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control pass-ip" id="pass" name="pass" required>
+                        <label for="pass">Password</label>
+                    </div>
 
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control email-ip" id="email" name="email" placeholder="name@example.com">
-                    <label for="email">Email address</label>
-                </div>
-
-                <div class="form-floating mb-3">
-                    <input type="password" class="form-control pass-ip" id="pass" name="pass" placeholder="Password">
-                    <label for="pass">Password</label>
-                    <p>Password should contain atleast 8 character A combination of uppercase letters, lowercase letters, numbers, and symbols.</p>
-                </div>
-
-                <div class="text-center">
-                    <a href="#" class="btn btn-primary mx-auto">Login</a>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary mx-auto">Login</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-
-
+    </form>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
