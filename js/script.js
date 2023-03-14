@@ -5,6 +5,9 @@ document.querySelector("#myForm").addEventListener("submit", function(e){
     login();
 });
 
+const orig_email_ip = document.getElementById("email");
+const orig_pass_ip = document.getElementById("pass");
+
 const orig_email = "jaykoshti@gmail.com";
 const orig_pass = "Jay123@Koshti";
 
@@ -15,15 +18,27 @@ function login() {
     const email = document.getElementById("email").value;
     const pass = document.getElementById("pass").value;
 
+    document.getElementById('emailerror').innerHTML = "";
+    // document.getElementById("email").style.border = "1px solid gray";
+    document.getElementById("email").style = orig_email_ip.value;
+
+    document.getElementById('passerror').innerHTML = "";
+    // document.getElementById("pass").style.border = "1px solid gray";
+    document.getElementById("pass").style = orig_pass_ip.value;
+
     if(!emailRegex.test(email)) {
-        document.getElementById('emailerror').innerHTML = "** email is Invalid";
+        document.getElementById("emailerror").innerHTML = "email is Invalid";
+        document.getElementById("email").style.border = "1px solid red";
+
         if(!passwordRegex.test(pass)) {
-            document.getElementById('passerror').innerHTML = "** password is Invalid";
+            document.getElementById('passerror').innerHTML = "password is Invalid";
+            document.getElementById("pass").style.border = "1px solid red";
         }
         return false;
     }
     else if(!passwordRegex.test(pass)) {
-        document.getElementById('passerror').innerHTML = "** password is Invalid";
+        document.getElementById('passerror').innerHTML = "password is Invalid";
+        document.getElementById("pass").style.border = "1px solid red";
         return false;
     }
     else if(orig_email===email && orig_pass===pass) {

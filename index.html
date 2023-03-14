@@ -24,15 +24,17 @@
                     <div class="form-floating mb-3">
                         <input type="email" class="form-control email-ip" id="email" name="email" required>
                         <label for="email">Email address</label>
-                        <span id="emailerror" class="text-danger font-wight-bold"></span>
+                        <small class="text-muted">sample@gmail.com</small><br>
+                        <strong id="emailerror" class="text-danger font-wight-bold"></strong>
                     </div>
 
                     <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" -->
                     <!--   -->
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control pass-ip" id="pass" name="pass" title="password must be at least 8 or more characters and must contain at least one number, one uppercase letter, one lowercase letter, one special character (!@#$%^&*)" required>
+                        <input type="password" class="form-control pass-ip" id="pass" name="pass" required>
                         <label for="pass">Password</label>
-                        <span id="passerror" class="text-danger font-wight-bold"></span>
+                        <small class="text-muted">password must be at least 8 or more characters and must contain at least one number, one uppercase letter, one lowercase letter, one special character (!@#$%^&*)</small><br>
+                        <strong id="passerror" class="text-danger font-wight-bold"></strong>
                     </div>
 
                     <div class="text-center">
